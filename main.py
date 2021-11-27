@@ -1,0 +1,52 @@
+import os
+import random
+from typing import *
+from tkinter import *
+from tkinter import messagebox
+
+if os.path.exists(".meals/meals.txt"):
+    with open(".meals/meals.txt", "r") as f:
+        meal_data_list = f.readlines()
+        f.close()
+    __meal__ = random.choice(meal_data_list)
+    print(__meal__)
+else:
+    messagebox.showerror("EatzGo:", "Couldn't find file \"meals.txt\"")
+
+class EatzGo:
+    def __init__(self) -> Any:
+        self.screen_size = "700x500"
+        self.main_theme_color = "green"
+        self.root_title = "EatzGo!"
+        self.favicon_path = "favicon.ico"
+
+        self.root = Tk()
+        self.root.title(self.root_title)
+        self.root.geometry(self.screen_size)
+        self.root.config(bg=self.main_theme_color)
+        self.root.iconbitmap(self.favicon_path)
+
+        def switch_dark_mod():
+            self.root.config(bg="#000")
+
+        def switch_light_mod():
+            self.root.config(bg="#fff")
+
+        def switch_main_theme():
+            self.root.config(bg=self.main_theme_color)
+
+        self.dark_mod_btn = Button(self.root, text="Main Theme", font=('Arial', 13), bg="green", fg="#fff", command=switch_main_theme)
+        self.dark_mod_btn.place(x=0, y=408)
+
+        self.dark_mod_btn = Button(self.root, text="Dark Mod(beta)", font=('Arial', 13), bg="#000", fg="#fff", command=switch_dark_mod)
+        self.dark_mod_btn.place(x=0, y=437)
+
+        self.light_mod_btn = Button(self.root, text="Light Mod(beta)", font=('Arial', 13), bg="#fff", fg="#000", command=switch_light_mod)
+        self.light_mod_btn.place(x=0, y=470)
+
+        self.meal_label = Label(self.root, text=f"Today I prupose to you the meal: {__meal__}", font=('Arial', 20), bg="green", fg="#000")
+        self.meal_label.pack()
+        
+        self.root.mainloop()
+if __name__ == '__main__':
+    EatzGo()

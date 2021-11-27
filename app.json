@@ -1,0 +1,16 @@
+{
+    "version" : "0.0.1 alpha A-1",
+    "name" : "EatzGo",
+    "short_name" : "EatzG",
+    "description" : "An IA that can prupose you what you can eat !",
+    "files" : [
+        {
+            "files.others" : [
+                ".meals/meals.txt"
+            ],
+            "files.__main__" : ".\\main.py"
+        }
+    ],
+    "public_executable" : ".\\EatzGo.exe",
+    "dev_executable" : ".\\main.py"
+}
