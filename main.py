@@ -22,7 +22,7 @@ class EatzGo:
         self.screen_size = "700x500"
         self.main_theme_color = "green"
         self.root_title = "EatzGo!"
-        self.favicon_path = "favicon.ico"
+        self.favicon_path = "assets/icon/favicon.ico"
 
         self.root = Tk()
         self.root.title(self.root_title)
