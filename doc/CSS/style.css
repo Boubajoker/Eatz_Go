@@ -1,0 +1,29 @@
+body {
+    font-family: Arial;
+    background: rgba(0, 0, 0, 0.5);
+}
+.downlaod-btn {
+    opacity: 0.7;
+    border-width: 0px;
+    background: rgba(27, 163, 27, 0.856);
+    font-size: 20px;
+    width: 700px;
+    height: 100px;
+    text-shadow: 0px 0px 10px #000;
+    -webkit-transition: width ease 1s, opacity ease 0.5s;
+    -moz-transition: width ease 2.5s, opacity ease 0.5s;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 30px;
+}
+.downlaod-btn:hover {
+    opacity: 1;
+    width: 790px;
+}
+.welcome-title {
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0px 0px 10px #000;
+    text-align: center;
+    margin-top: 20px;
+}
