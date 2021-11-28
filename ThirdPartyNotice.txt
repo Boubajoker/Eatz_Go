@@ -1,0 +1,14 @@
+/*! ======================================================
+
+EatzGo Copyright (c) Boubajoker 2021. All right reserved.
+Project under MIT License.
+
+<!--ThirdPartyNotice
+
+    <!--- EatzGoServiceLoger
+        EatzGoServiceLoger is a simple loger that just log in the file 'log/cookie.log'
+        the pruposed meal and the actual date of log.
+    ---!>
+
+--!>
+========================================================== !*/

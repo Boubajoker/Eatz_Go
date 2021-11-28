@@ -1,8 +1,12 @@
 import os
 import random
+import datetime
 from typing import *
 from tkinter import *
 from tkinter import messagebox
+
+dttime = datetime.datetime.now()
+print(dttime.strftime("%Y-%m-%d %H:%M:%S"))
 
 if os.path.exists(".meals/meals.txt"):
     with open(".meals/meals.txt", "r") as f:
@@ -48,5 +52,13 @@ class EatzGo:
         self.meal_label.pack()
         
         self.root.mainloop()
+class EatzGoServiceLoger:
+    dttime = datetime.datetime.now()
+    res_date = dttime.strftime("%Y-%m-%d %H:%M:%S")
+    with open("log/cookie.log", "a+") as f:
+        f.write(f"pruposed_meal : {__meal__}\n")
+        f.write(res_date + "\n")
+        f.close()
+
 if __name__ == '__main__':
     EatzGo()
