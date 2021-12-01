@@ -8,6 +8,12 @@ And execute <a href="EatzGo.exe">EatzGo.exe</a> for normal using.
 
 And that's it, the IA will prupose to you a meal !
 
+# Requied to launch the project (dev)
+
+- Git
+- Python 3.8.10 minimal version
+- Win7 64bits minimal
+
 # Check out my other projects !
 
 - <a href="https://github.com/Boubajoker/pypacket/">Pypacket</a>

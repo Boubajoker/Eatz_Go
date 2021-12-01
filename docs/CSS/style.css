@@ -1,7 +1,3 @@
-body {
-    font-family: Arial;
-    background: rgba(0, 0, 0, 0.5);
-}
 .downlaod-btn {
     opacity: 0.7;
     border-width: 0px;
@@ -25,5 +21,35 @@ body {
     color: #fff;
     text-shadow: 0px 0px 10px #000;
     text-align: center;
+    margin-top: 20px;
+}
+.main-docs-title {
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0px 0px 10px #000;
+    text-align: left;
+    margin-top: 50px;
+}
+.q-1 {
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0px 0px 10px #000;
+    text-align: left;
+}
+.a-1 {
+    font-weight: bold;
+    color: #000;
+    text-shadow: 0px 0px 10px #fff;
+    text-align: left;
+}
+.sponsor-box {
+    width: 700px;
+    height: 100px;
+    background: rgba(27, 163, 27, 0.856);
+    font-size: 20px;
+    text-shadow: 0px 0px 10px #000;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 30px;
     margin-top: 20px;
 }
