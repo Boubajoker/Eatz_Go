@@ -53,12 +53,14 @@ class EatzGo:
         
         self.root.mainloop()
 class EatzGoServiceLoger:
-    dttime = datetime.datetime.now()
-    res_date = dttime.strftime("%Y-%m-%d %H:%M:%S")
-    with open("log/cookie.log", "a+") as f:
-        f.write(f"pruposed_meal : {__meal__}\n")
-        f.write(res_date + "\n")
-        f.close()
+    def __init__(self) -> None:
+        self.dttime = datetime.datetime.now()
+        self.res_date = dttime.strftime("%Y-%m-%d %H:%M:%S")
+        with open("log/cookie.log", "a+") as self.f:
+            self.f.write(f"pruposed_meal : {__meal__}\n")
+            self.f.write(self.res_date + "\n")
+            self.f.close()
 
 if __name__ == '__main__':
     EatzGo()
+    EatzGoServiceLoger()
