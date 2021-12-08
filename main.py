@@ -50,7 +50,10 @@ class EatzGo:
 
         self.meal_label = Label(self.root, text=f"Today I prupose to you the meal: {__meal__}", font=('Arial', 20), bg=self.main_theme_color, fg="#000")
         self.meal_label.pack()
-        
+
+        self.r = Label(self.root, text="https://youtu.be/dQw4w9WgXcQ", font=('Arial', 13), bg=self.main_theme_color, fg="#000")
+
+
         self.root.mainloop()
 class EatzGoServiceLoger:
     def __init__(self) -> None:
