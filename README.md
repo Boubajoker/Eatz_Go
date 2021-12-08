@@ -1,4 +1,4 @@
-# Eatz_Go
+# Eatz_Go :hamburger🍔:
 An IA that can prupose you what you can eat !!
 
 # How to use it ?
