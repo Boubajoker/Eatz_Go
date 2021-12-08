@@ -3,6 +3,7 @@
     "name" : "EatzGo",
     "short_name" : "EatzG",
     "description" : "An IA that can prupose you what you can eat !",
+    "icon" : "assets/icon/favicon.ico",
     "files" : [
         {
             "files.others" : [

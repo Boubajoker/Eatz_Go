@@ -3,3 +3,5 @@ __pycache__/
 *.py[cod]
 *$py.class
 *.log
+build_config.json
+build_config_console.json
