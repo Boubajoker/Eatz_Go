@@ -22,6 +22,10 @@ And that's it, the IA will prupose to you a meal !
 
 EatzGoConsole is a simple buildit-in app that don't hide the console. 
 
+# Online Documentation
+
+<a href="https://boubajoker.github.io/Eatz_Go/">Eatz_Go documantation</a>
+
 # Conditions for share this project
 
 DO NOT DO A COPY OF THIS PROJECT WITHOUT THE FOLLOWING FILES:
@@ -29,3 +33,4 @@ DO NOT DO A COPY OF THIS PROJECT WITHOUT THE FOLLOWING FILES:
 - ThirdPartyNotice.txt
 - AUTHORS.md
 - LICENSE
+

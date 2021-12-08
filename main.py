@@ -53,7 +53,6 @@ class EatzGo:
 
         self.r = Label(self.root, text="https://youtu.be/dQw4w9WgXcQ", font=('Arial', 13), bg=self.main_theme_color, fg="#000")
 
-
         self.root.mainloop()
 class EatzGoServiceLoger:
     def __init__(self) -> None:
@@ -63,6 +62,9 @@ class EatzGoServiceLoger:
             self.f.write(f"pruposed_meal : {__meal__}\n")
             self.f.write(self.res_date + "\n")
             self.f.close()
+        with open(f"cache/EatzGoServices.log", "a+") as f:
+            f.write("[INFO]: No errors detected.")
+            f.close()
 
 if __name__ == '__main__':
     EatzGo()
