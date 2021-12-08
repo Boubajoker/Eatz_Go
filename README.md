@@ -18,6 +18,10 @@ And that's it, the IA will prupose to you a meal !
 
 - <a href="https://github.com/Boubajoker/pypacket/">Pypacket</a>
 
+# EatzGoConsole
+
+EatzGoConsole is a simple buildit-in app that don't hide the console. 
+
 # Conditions for share this project
 
 DO NOT DO A COPY OF THIS PROJECT WITHOUT THE FOLLOWING FILES:
