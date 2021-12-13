@@ -18,17 +18,14 @@ else:
     messagebox.showerror("EatzGo:", "Couldn't find file \"meals.txt\"")
 
 class EatzGo:
-    def __init__(self) -> Any:
-        self.screen_size = "700x500"
+    def __init__(self, root_title, root_size, root_bg, root_favicon) -> Any:
         self.main_theme_color = "green"
-        self.root_title = "EatzGo!"
-        self.favicon_path = "assets/icon/favicon.ico"
 
         self.root = Tk()
-        self.root.title(self.root_title)
-        self.root.geometry(self.screen_size)
-        self.root.config(bg=self.main_theme_color)
-        self.root.iconbitmap(self.favicon_path)
+        self.root.title(root_title)
+        self.root.geometry(root_size)
+        self.root.config(bg=root_bg)
+        self.root.iconbitmap(root_favicon)
 
         def switch_dark_mod():
             self.root.config(bg="#000")
@@ -55,7 +52,7 @@ class EatzGo:
 
         self.root.mainloop()
 class EatzGoServiceLoger:
-    def __init__(self) -> None:
+    def __init__(self) -> Any:
         self.dttime = datetime.datetime.now()
         self.res_date = dttime.strftime("%Y-%m-%d %H:%M:%S")
         with open("log/cookie.log", "a+") as self.f:
@@ -63,9 +60,41 @@ class EatzGoServiceLoger:
             self.f.write(self.res_date + "\n")
             self.f.close()
         with open(f"cache/EatzGoServices.log", "a+") as f:
-            f.write("[INFO]: No errors detected.")
+            f.write(f"[Script_Path]: 'main.py' saved:{None}\n")
             f.close()
 
+class EatzGoSecurityChecker:
+    def __init__(self) -> Any:
+        self.LICENSE = "LICENSE"
+        self.CopyRight = "CopyRight.txt"
+        self.AUTHORS = "AUTHORS.md"
+        self.ThirdPartyNotice = "ThirdPartyNotice.txt"
+
+        if os.path.exists(self.LICENSE):
+            print(self.LICENSE, "file found.")
+        else:
+            messagebox.showerror("EatzGo:", f"{self.LICENSE} file not found, if you are using an illegal copy of this project quit it NOW !")
+            quit()
+
+        if os.path.exists(self.AUTHORS):
+            print(self.AUTHORS, "file found.")
+        else:
+            messagebox.showerror("EatzGo:", f"{self.AUTHORS} file not found, if you are using an illegal copy of this project quit it NOW !")
+            quit()
+
+        if os.path.exists(self.CopyRight):
+            print(self.CopyRight, "file found.")
+        else:
+            messagebox.showerror("EatzGo:", f"{self.CopyRight} file not found, if you are using an illegal copy of this project quit it NOW !")
+            quit()
+
+        if os.path.exists(self.ThirdPartyNotice):
+            print(self.ThirdPartyNotice, "file found.")
+        else:
+            messagebox.showerror("EatzGo:", f"{self.ThirdPartyNotice} file not found, if you are using an illegal copy of this project quit it NOW !")
+            quit()
+
 if __name__ == '__main__':
-    EatzGo()
+    EatzGoSecurityChecker()
+    EatzGo("EatzGo!", root_size="700x500", root_bg="green", root_favicon="assets/icon/favicon.ico")
     EatzGoServiceLoger()

@@ -9,6 +9,9 @@ Project under MIT License.
         EatzGoServiceLoger is a simple loger that just log in the file 'log/cookie.log'
         the pruposed meal and the actual date of log.
     ---!>
+    <!--- EatzGoSecurityChecker
+        EatzGoSecurityChecker is a software that checks if files that are requied to send this project is this directory.
+    ---!>
 
 --!>
 ========================================================== !*/
