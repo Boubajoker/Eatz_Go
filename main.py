@@ -8,14 +8,15 @@ from tkinter import messagebox
 dttime = datetime.datetime.now()
 print(dttime.strftime("%Y-%m-%d %H:%M:%S"))
 
-if os.path.exists(".meals/meals.txt"):
-    with open(".meals/meals.txt", "r") as f:
-        meal_data_list = f.readlines()
-        f.close()
-    __meal__ = random.choice(meal_data_list)
-    print(__meal__)
-else:
-    messagebox.showerror("EatzGo:", "Couldn't find file \"meals.txt\"")
+class EatzGoCore:
+    if os.path.exists(".meals/meals.txt"):
+        with open(".meals/meals.txt", "r") as f:
+            meal_data_list = f.readlines()
+            f.close()
+        __meal__ = random.choice(meal_data_list)
+        print(__meal__)
+    else:
+        messagebox.showerror("EatzGo:", "Couldn't find file \"meals.txt\"")
 
 class EatzGo:
     def __init__(self, root_title, root_size, root_bg, root_favicon) -> Any:
@@ -45,10 +46,10 @@ class EatzGo:
         self.light_mod_btn = Button(self.root, text="Light Mod(beta)", font=('Arial', 13), bg="#fff", fg="#000", command=switch_light_mod)
         self.light_mod_btn.place(x=0, y=470)
 
-        self.meal_label = Label(self.root, text=f"Today I prupose to you the meal: {__meal__}", font=('Arial', 20), bg=self.main_theme_color, fg="#000")
+        self.meal_label = Label(self.root, text=f"Today I prupose to you the meal: {EatzGoCore.__meal__}", font=('Arial', 20), bg=self.main_theme_color, fg="#000")
         self.meal_label.pack()
 
-        self.r = Label(self.root, text="https://youtu.be/dQw4w9WgXcQ", font=('Arial', 13), bg=self.main_theme_color, fg="#000")
+        self.nggyu = Label(self.root, text="https://youtu.be/dQw4w9WgXcQ", font=('Arial', 13), bg=self.main_theme_color, fg="#000")
 
         self.root.mainloop()
 class EatzGoServiceLoger:
@@ -56,7 +57,7 @@ class EatzGoServiceLoger:
         self.dttime = datetime.datetime.now()
         self.res_date = dttime.strftime("%Y-%m-%d %H:%M:%S")
         with open("log/cookie.log", "a+") as self.f:
-            self.f.write(f"pruposed_meal : {__meal__}\n")
+            self.f.write(f"pruposed_meal : {EatzGoCore.__meal__}\n")
             self.f.write(self.res_date + "\n")
             self.f.close()
         with open(f"cache/EatzGoServices.log", "a+") as f:
