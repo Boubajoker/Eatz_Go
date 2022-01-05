@@ -28,22 +28,13 @@ class EatzGo:
         self.root.config(bg=root_bg)
         self.root.iconbitmap(root_favicon)
 
-        def switch_dark_mod():
-            self.root.config(bg="#000")
-
-        def switch_light_mod():
-            self.root.config(bg="#fff")
-
-        def switch_main_theme():
-            self.root.config(bg=self.main_theme_color)
-
-        self.dark_mod_btn = Button(self.root, text="Main Theme", font=('Arial', 13), bg=self.main_theme_color, fg="#fff", command=switch_main_theme)
+        self.dark_mod_btn = Button(self.root, text="Main Theme", font=('Arial', 13), bg=self.main_theme_color, fg="#fff", command=self.switch_main_theme)
         self.dark_mod_btn.place(x=0, y=408)
 
-        self.dark_mod_btn = Button(self.root, text="Dark Mod(beta)", font=('Arial', 13), bg="#000", fg="#fff", command=switch_dark_mod)
+        self.dark_mod_btn = Button(self.root, text="Dark Mod(beta)", font=('Arial', 13), bg="#000", fg="#fff", command=self.switch_dark_mod)
         self.dark_mod_btn.place(x=0, y=437)
 
-        self.light_mod_btn = Button(self.root, text="Light Mod(beta)", font=('Arial', 13), bg="#fff", fg="#000", command=switch_light_mod)
+        self.light_mod_btn = Button(self.root, text="Light Mod(beta)", font=('Arial', 13), bg="#fff", fg="#000", command=self.switch_light_mod)
         self.light_mod_btn.place(x=0, y=470)
 
         self.meal_label = Label(self.root, text=f"Today I prupose to you the meal: {EatzGoCore.__meal__}", font=('Arial', 20), bg=self.main_theme_color, fg="#000")
@@ -52,6 +43,16 @@ class EatzGo:
         self.nggyu = Label(self.root, text="https://youtu.be/dQw4w9WgXcQ", font=('Arial', 13), bg=self.main_theme_color, fg="#000")
 
         self.root.mainloop()
+
+    def switch_dark_mod(self):
+        self.root.config(bg="#000")
+
+    def switch_light_mod(self):
+        self.root.config(bg="#fff")
+
+    def switch_main_theme(self):
+        self.root.config(bg=self.main_theme_color)
+
 class EatzGoServiceLoger:
     def __init__(self) -> Any:
         self.dttime = datetime.datetime.now()
