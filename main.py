@@ -8,6 +8,19 @@ from tkinter import messagebox
 dttime = datetime.datetime.now()
 print(dttime.strftime("%Y-%m-%d %H:%M:%S"))
 
+class Locales:
+    langs_locales = {
+        'en::prupose_text' : 'Today I prupose to you the meal:',
+        'en::main_theme_btn_text' : 'Main Theme',
+        'en::dark_mod_btn_text' : 'Dark Mod [beta]',
+        'en::light_mod_btn_text' : 'Light Mod (beta]',
+
+        'fr::prupose_text' : 'Aujourd\'hui je vous propose le repas:',
+        'fr::main_theme_btn_text' : 'Theme Principal',
+        'fr::dark_mod_btn_text' : 'Mode Sombre [en test]',
+        'fr::light_mod_btn_text' : 'Mode Claire [en test]',
+    }
+
 class EatzGoCore:
     if os.path.exists(".meals/meals.txt"):
         with open(".meals/meals.txt", "r") as f:
@@ -28,19 +41,23 @@ class EatzGo:
         self.root.config(bg=root_bg)
         self.root.iconbitmap(root_favicon)
 
-        self.dark_mod_btn = Button(self.root, text="Main Theme", font=('Arial', 13), bg=self.main_theme_color, fg="#fff", command=self.switch_main_theme)
-        self.dark_mod_btn.place(x=0, y=408)
+        self.main_theme_mod_btn = Button(self.root, text=f"{Locales.langs_locales.get('en::main_theme_btn_text')}", font=('Arial', 13), bg=self.main_theme_color, fg="#fff", command=self.switch_main_theme)
+        self.main_theme_mod_btn.place(x=0, y=408)
 
-        self.dark_mod_btn = Button(self.root, text="Dark Mod(beta)", font=('Arial', 13), bg="#000", fg="#fff", command=self.switch_dark_mod)
+        self.dark_mod_btn = Button(self.root, text=f"{Locales.langs_locales.get('en::dark_mod_btn_text')}", font=('Arial', 13), bg="#000", fg="#fff", command=self.switch_dark_mod)
         self.dark_mod_btn.place(x=0, y=437)
 
-        self.light_mod_btn = Button(self.root, text="Light Mod(beta)", font=('Arial', 13), bg="#fff", fg="#000", command=self.switch_light_mod)
+        self.light_mod_btn = Button(self.root, text=f"{Locales.langs_locales.get('en::light_mod_btn_text')}", font=('Arial', 13), bg="#fff", fg="#000", command=self.switch_light_mod)
         self.light_mod_btn.place(x=0, y=470)
 
-        self.meal_label = Label(self.root, text=f"Today I prupose to you the meal: {EatzGoCore.__meal__}", font=('Arial', 20), bg=self.main_theme_color, fg="#000")
+        self.meal_label = Label(self.root, text=f"{Locales.langs_locales.get('en::prupose_text')} {EatzGoCore.__meal__} !", font=('Arial', 20), bg=self.main_theme_color, fg="#000")
         self.meal_label.pack()
 
-        self.nggyu = Label(self.root, text="https://youtu.be/dQw4w9WgXcQ", font=('Arial', 13), bg=self.main_theme_color, fg="#000")
+        self.switch_french = Button(self.root, text="Switch to french (passer en français) [beta, en test]", font=('Arial', 10), bg=self.main_theme_color, fg="#000", command=self.switch_to_french)
+        self.switch_french.place(x=0, y=380)
+
+        self.switch_english = Button(self.root, text="Switch to english", font=('Arial', 10), bg=self.main_theme_color, fg="#000", command=self.switch_to_english)
+        self.switch_english.place(x=0, y=352)
 
         self.root.mainloop()
 
@@ -52,6 +69,32 @@ class EatzGo:
 
     def switch_main_theme(self):
         self.root.config(bg=self.main_theme_color)
+    
+    def switch_to_french(self):
+        self.main_theme_mod_btn = Button(self.root, text=f"{Locales.langs_locales.get('fr::main_theme_btn_text')}", font=('Arial', 13), bg=self.main_theme_color, fg="#fff", command=self.switch_main_theme)
+        self.main_theme_mod_btn.place(x=0, y=408)
+
+        self.dark_mod_btn = Button(self.root, text=f"{Locales.langs_locales.get('fr::dark_mod_btn_text')}", font=('Arial', 13), bg="#000", fg="#fff", command=self.switch_dark_mod)
+        self.dark_mod_btn.place(x=0, y=437)
+
+        self.light_mod_btn = Button(self.root, text=f"{Locales.langs_locales.get('fr::light_mod_btn_text')}", font=('Arial', 13), bg="#fff", fg="#000", command=self.switch_light_mod)
+        self.light_mod_btn.place(x=0, y=470)
+
+        self.meal_label = Label(self.root, text=f"{Locales.langs_locales.get('fr::prupose_text')} {EatzGoCore.__meal__} !", font=('Arial', 20), bg=self.main_theme_color, fg="#000")
+        self.meal_label.pack()
+
+    def switch_to_english(self):
+        self.main_theme_mod_btn = Button(self.root, text=f"{Locales.langs_locales.get('en::main_theme_btn_text')}", font=('Arial', 13), bg=self.main_theme_color, fg="#fff", command=self.switch_main_theme)
+        self.main_theme_mod_btn.place(x=0, y=408)
+
+        self.dark_mod_btn = Button(self.root, text=f"{Locales.langs_locales.get('en::dark_mod_btn_text')}", font=('Arial', 13), bg="#000", fg="#fff", command=self.switch_dark_mod)
+        self.dark_mod_btn.place(x=0, y=437)
+
+        self.light_mod_btn = Button(self.root, text=f"{Locales.langs_locales.get('en::light_mod_btn_text')}", font=('Arial', 13), bg="#fff", fg="#000", command=self.switch_light_mod)
+        self.light_mod_btn.place(x=0, y=470)
+
+        self.meal_label = Label(self.root, text=f"{Locales.langs_locales.get('en::prupose_text')} {EatzGoCore.__meal__}", font=('Arial', 20), bg=self.main_theme_color, fg="#000")
+        self.meal_label.place(x=53, y=0)
 
 class EatzGoServiceLoger:
     def __init__(self) -> Any:
