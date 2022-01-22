@@ -14,11 +14,13 @@ class Locales:
         'en::main_theme_btn_text' : 'Main Theme',
         'en::dark_mod_btn_text' : 'Dark Mod [beta]',
         'en::light_mod_btn_text' : 'Light Mod (beta]',
+        'en::clean_btn_text' : 'Clean EatzGo !',
 
         'fr::prupose_text' : 'Aujourd\'hui je vous propose le repas:',
         'fr::main_theme_btn_text' : 'Theme Principal',
         'fr::dark_mod_btn_text' : 'Mode Sombre [en test]',
         'fr::light_mod_btn_text' : 'Mode Claire [en test]',
+        'fr::clean_btn_text' : 'Nettoyez EatzGo !'
     }
 
 class EatzGoCore:
@@ -31,15 +33,16 @@ class EatzGoCore:
     else:
         messagebox.showerror("EatzGo:", "Couldn't find file \"meals.txt\"")
 
-class EatzGo:
-    def __init__(self, root_title, root_size, root_bg, root_favicon) -> Any:
+class EatzGo(object):
+    def __init__(self, root_title: str, height:int, width:int, root_bg=None, root_favicon=None) -> Any:
+        super().__init__()
         self.main_theme_color = "green"
 
         self.root = Tk()
         self.root.title(root_title)
-        self.root.geometry(root_size)
+        self.root.geometry(f"{height}x{width}")
         self.root.config(bg=root_bg)
-        self.root.iconbitmap(root_favicon)
+        self.root.iconbitmap(f"{root_favicon}.ico")
 
         self.main_theme_mod_btn = Button(self.root, text=f"{Locales.langs_locales.get('en::main_theme_btn_text')}", font=('Arial', 13), bg=self.main_theme_color, fg="#fff", command=self.switch_main_theme)
         self.main_theme_mod_btn.place(x=0, y=408)
@@ -58,6 +61,9 @@ class EatzGo:
 
         self.switch_english = Button(self.root, text="Switch to english", font=('Arial', 10), bg=self.main_theme_color, fg="#000", command=self.switch_to_english)
         self.switch_english.place(x=0, y=352)
+
+        self.clean_btn_acces = Button(self.root, text="Clean EatzGo", font=('Arial', 13), bg=self.main_theme_color, fg="#000", command=self.clean)
+        self.clean_btn_acces.pack()
 
         self.root.mainloop()
 
@@ -95,6 +101,21 @@ class EatzGo:
 
         self.meal_label = Label(self.root, text=f"{Locales.langs_locales.get('en::prupose_text')} {EatzGoCore.__meal__}", font=('Arial', 20), bg=self.main_theme_color, fg="#000")
         self.meal_label.place(x=53, y=0)
+    
+    def clean(self):
+        try:
+            with open("log/cookie.log", "w+") as self.f:
+                self.f.write("")
+                self.f.close()
+        except Exception as e:  
+            print(f"[cleaner][UnknowExepetion: {e}]")
+
+        try:
+            with open("cache/EatzGoServices.log", "w+") as f:
+                f.write("")
+                f.close()
+        except Exception as e:
+            print(f"[cleaner][UnknowExepetion: {e}]")
 
 class EatzGoServiceLoger:
     def __init__(self) -> Any:
@@ -141,5 +162,6 @@ class EatzGoSecurityChecker:
 
 if __name__ == '__main__':
     EatzGoSecurityChecker()
-    EatzGo("EatzGo!", root_size="700x500", root_bg="green", root_favicon="assets/icon/favicon.ico")
     EatzGoServiceLoger()
+    print("<!--EatzGo Copyright (c) Boubajoker 2021. All right reserved. Project under MIT License.-->")
+    EatzGo("EatzGo!", height=700, width=500, root_bg="green", root_favicon="assets/icon/favicon")
