@@ -45,7 +45,7 @@ A simple EatzGo Develloper option. Execute it with '[`shell.py`](shell.py)'
 
 ## Online Documentation
 
-for more info check [Eatz Go documantation](https://boubajoker.github.io/Eatz_Go/")
+for more info check [Eatz Go documantation](https://boubajoker.github.io/Eatz_Go/)
 
 ## Therms and Conditions for share this project
 
