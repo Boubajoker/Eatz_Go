@@ -1,17 +1,69 @@
 {
-    "version" : "0.0.1 alpha C-2",
+    "version" : "0.0.1 alpha B-2",
     "name" : "EatzGo",
     "short_name" : "EatzG",
+    "type" : "App",
     "description" : "An IA that can prupose you what you can eat !",
-    "icon" : "assets/icon/favicon.ico",
-    "files" : [
+    "icon" : "${fileDirname}\\assets\\icon\\favicon.ico",
+    "scripts" : [
+        "${fileDirname}\\main.py",
+        "${fileDirname}\\shell.py",
+        "${fileDirname}\\security\\__init__.py"
+    ],
+    "docs" : [
         {
-            "files.others" : [
-                ".meals/meals.txt"
+            "docs.pages" : [
+                "${fileDirname}\\docs\\index.html",
+                "${fileDirname}\\docs\\home.html"
             ],
-            "files.__main__" : ".\\main.py"
+            "docs.styles" : [
+                "${fileDirname}\\docs\\CSS\\style.css",
+                "${fileDirname}\\docs\\CSS\\loading.css"
+            ],
+            "docs.scripts" : [
+                "${fileDirname}\\docs\\JS\\app.js",
+                "${fileDirname}\\docs\\JS\\loading.js"
+            ],
+            "docs.assets" : [
+                "${fileDirname}\\docs\\assets\\icon\\favicon.ico",
+                "${fileDirname}\\docs\\assets\\others\\Eatz_Go.zip"
+            ]
         }
     ],
-    "public_executable" : ".\\EatzGo.exe",
-    "dev_executable" : ".\\main.py"
+    "GithubComponents" : [
+        {
+            "GithubComponents.README" : "${fileDirname}\\README.md",
+            "GithubComponents.LICENSE" : "${fileDirname}\\LICENSE",
+            "GithubComponents.CODE_OF_CONDUCT" : "${fileDirname}\\CODE_OF_CONDUCT.md",
+            "GithubComponents.CHANGELOG" : "${fileDirname}\\CHANGELOG.md",
+            "GithubComponents.ISSUE_TEMPLATE" : [
+                "${fileDirname}\\.github\\ISSUE_TEMPLATE\\bug_report.md",
+                "${fileDirname}\\.github\\ISSUE_TEMPLATE\\custom.md",
+                "${fileDirname}\\feature_request.md"
+            ],
+            "GithubComponents.CONTRIBUTING" : "${fileDirname}\\CONTRIBUTING.md",
+            "GithubComponents.AUTHORS" : "${fileDirname}\\AUTHORS.md",
+            "GithubComponents.gitattributes" : "${fileDirname}\\.gitattributes",
+            "GithubComponents.gitignore" : "${fileDirname}\\.gitignore",
+            "GithubComponents.workflows" : "${fileDirname}\\.github\\wotkflows\\codeql-analysis.yml"
+        }
+    ],
+    "locales" : [
+        {
+            "locales.path" : "${fileDirname}\\main.py::12",
+            "locales.en" : "${fileDirname}\\main.py::13-19",
+            "locales.fr" : "${fileDirname}\\main.py::21-26"
+        }
+    ],
+    "programing_lang" : [
+        {
+            "programing_lang.name" : "python",
+            "programing_lang.version" : 3.8
+        }
+    ],
+    "public_executable" : "${fileDirname}\\EatzGo.exe",
+    "dev_executables" : [
+        "${fileDirname}\\main.py",
+        "${fileDirname}\\eatzgodev.sh"
+    ]
 }

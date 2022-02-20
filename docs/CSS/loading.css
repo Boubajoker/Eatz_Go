@@ -1,0 +1,46 @@
+body {
+    font-family: Consolas;
+    background: rgb(153, 153, 153);
+    cursor: none;
+}
+.loader-container {
+    text-align: center;
+    font-size: 70px;
+    letter-spacing: 5px;
+    text-shadow: 0px 0px 10px #f9fd00;
+}
+.loader-text {
+    animation: loading 4s infinite ease-in-out;
+}
+@keyframes loading {
+    15% {
+        text-shadow: 10px 0px 0px#f9fd00;
+    }
+    25% {
+        text-shadow: 0px 10px 0px#f9fd00;
+    }
+    35% {
+        text-shadow: 0px 0px 10px #f9fd00;
+    }
+    45% {
+        text-shadow: 10px 0px 0px #f9fd00;
+    }
+    55% {
+        text-shadow: 0px 10px 0px #f9fd00;
+    }
+    65% {
+        text-shadow: 0px 0px 10px #f9fd00;       
+    }
+    75% {
+        text-shadow: 10px 0px 0px #f9fd00;
+    }
+    85% {
+        text-shadow: 0px 10px 0px #f9fd00;
+    }
+    95% {
+        text-shadow: 0px 0px 10px #f9fd00;
+    }
+    100% {
+        text-shadow: 0px 0px 10px #f9fd00;
+    }
+}

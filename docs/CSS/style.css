@@ -6,10 +6,10 @@
     width: 700px;
     height: 100px;
     text-shadow: 0px 0px 10px #000;
-    -webkit-transition: width ease 1s, opacity ease 0.5s;
-    -moz-transition: width ease 2.5s, opacity ease 0.5s;
-    -webkit-border-radius: 40px;
-    -moz-border-radius: 30px;
+    transition: width ease 0.5s, opacity ease 0.5s;
+    transition: width ease 0.5s, opacity ease 0.5s;
+    border-radius: 40px;
+    border-radius: 30px;
 }
 .downlaod-btn:hover {
     opacity: 1;
@@ -23,13 +23,14 @@
     text-align: center;
     margin-top: 20px;
 }
-.main-docs-title {
-    font-size: 30px;
+h1, h2 {
     font-weight: bold;
     color: #fff;
     text-shadow: 0px 0px 10px #000;
     text-align: left;
-    margin-top: 50px;
+}
+.main-docs-title {
+    text-align: center;
 }
 .q-1 {
     font-weight: bold;
@@ -43,13 +44,54 @@
     text-shadow: 0px 0px 10px #fff;
     text-align: left;
 }
-.sponsor-box {
-    width: 700px;
-    height: 100px;
+.dark-mod-btn {
+    opacity: 0.7;
+    border-width: 0px;
+    background: rgb(0, 0, 0);
+    font-size: 20px;
+    width: 250px;
+    height: 50px;
+    text-shadow: 0px 0px 10px rgb(255, 255, 255);
+    transition: width ease 0.5s, opacity ease 0.5s;
+    transition: width ease 0.5s, opacity ease 0.5s;
+    border-radius: 40px;
+    border-radius: 30px;
+}
+.dark-mod-btn:hover {
+    opacity: 1;
+    width: 300px;
+}
+.light-mod-btn {
+    opacity: 0.7;
+    border-width: 0px;
+    background: rgb(255, 255, 255);
+    font-size: 20px;
+    width: 250px;
+    height: 50px;
+    text-shadow: 0px 0px 10px rgb(0, 0, 0);
+    transition: width ease 0.5s, opacity ease 0.5s;
+    transition: width ease 0.5s, opacity ease 0.5s;
+    border-radius: 40px;
+    border-radius: 30px;
+}
+.light-mod-btn:hover {
+    opacity: 1;
+    width: 300px;
+}
+.main-theme-mod-btn {
+    opacity: 0.7;
+    border-width: 0px;
     background: rgba(27, 163, 27, 0.856);
     font-size: 20px;
-    text-shadow: 0px 0px 10px #000;
-    -webkit-border-radius: 40px;
-    -moz-border-radius: 30px;
-    margin-top: 20px;
+    width: 250px;
+    height: 50px;
+    text-shadow: 0px 0px 10px rgb(0, 0, 0);
+    transition: width ease 0.5s, opacity ease 0.5s;
+    transition: width ease 0.5s, opacity ease 0.5s;
+    border-radius: 40px;
+    border-radius: 30px;
+}
+.main-theme-mod-btn:hover {
+    opacity: 1;
+    width: 300px;
 }

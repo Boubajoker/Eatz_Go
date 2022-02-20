@@ -1,18 +1,25 @@
 {
     "configurations": [
         {
-            "name": "debugpy : Actual File",
+            "name": "debugpy : Debug Actual File",
             "type": "python",
             "request": "launch",
-            "program": "${file}",
+            "program": "${${fileBasenameNoExtension}.py",
             "console": "integratedTerminal"
         },
         {
-            "name": "debugpy : Launch EatzGo test file",
+            "name": "debugpy : Debug EatzGo",
             "type": "python",
             "request": "launch",
             "program": "main.py",
             "console": "integratedTerminal"
-        }
+        },
+        {
+            "name": "debugpy : Debug EatzGoShell",
+            "type": "python",
+            "request": "launch",
+            "program": "shell.py",
+            "console": "externalTerminal"
+        },
     ]
 }
