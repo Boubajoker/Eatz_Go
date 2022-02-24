@@ -39,6 +39,21 @@ Python3 --version
 bash --version
 ```
 
+## To launch the project (dev)
+
+To launch the project, you need to use `GNU bash` shell (!WARNING!: the extension are `.cmd` but the script is not adaptated to the CMD's default Windows shell so, DO NOT EXECUTE IT WITH `CMD` IT ISN'T ADAPTATED !!)
+
+## Update EatzGo
+
+To update EatzGo to the latest version, please follow the instructions:
+
+1. Click on the button `Up to date`.
+2. Then, on the pop-up window, click on the button `Download the latest realse of EatzGo !`.
+3. Wait a while and then click on the button `Open the zip file`.
+4. Extract `Eatz_Go.zip` file.
+5. All the old files and folders will be replaced by the new files and folders.
+6. You can now use the latest version of EatzGo ! :+1:
+
 ## EatzGoShell
 
 A simple EatzGo Develloper option. Execute it with '[`shell.py`](shell.py)'

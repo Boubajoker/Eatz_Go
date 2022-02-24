@@ -71,6 +71,24 @@
           "backgroundColor": "transparent",
           "bold": false,
           "italic": true
-      }
+        },
+        {
+          "tag": "@depercated",
+          "color": "#474747",
+          "strikethrough": true,
+          "underline": false,
+          "backgroundColor": "transparent",
+          "bold": false,
+          "italic": true
+        },
+        {
+          "tag": "@beta",
+          "color": "#474747",
+          "strikethrough": false,
+          "underline": false,
+          "backgroundColor": "transparent",
+          "bold": false,
+          "italic": true
+        },
     ]
 }

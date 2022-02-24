@@ -20,8 +20,9 @@ Commands:
                EatzGo --<option> [mod:str]
 
         EatzGo --set_meals [mod]: set the meal in the file "meals.txt". [mod]=w+, a+
-        EatzGo --open_caches: open cache folder.
-        EatzGo --open_logs: open logs folder.
+        EatzGo --open_caches: open cache file.
+        EatzGo --open_logs: open logs file.
+        EatzGo --open_meals: open meals.txt file.
 """
 #class `EatzGoShell`
 class EatzGoShell(object):
@@ -62,10 +63,12 @@ class EatzGoShell(object):
                 os.system("start cache/EatzGoServices.log")
             elif self.input_command == "EatzGo --open_logs":
                 os.system("start log/cookie.log")
+            elif self.input_command == "EatzGo --open_meals":
+                os.system("start .meals/meals.txt")
             elif self.input_command == "EatzGo":
-                os.system("EatzGo")
+                os.system(self.input_command)
             else:
-                self.commands = ["EatzGo --set_meal a+", "EatzGo --set_meal w+", "EatzGo --open_caches", "EatzGo --open_logs"]
+                self.commands = ["EatzGo --set_meal a+", "EatzGo --set_meal w+", "EatzGo --open_caches", "EatzGo --open_logs", "EatzGo --open_meals"]
                 print(f"[ERROR]:\"{self.input_command}\" is not defined. You can try this: {random.choice(self.commands)}")
 
 if __name__ == '__main__':

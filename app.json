@@ -1,5 +1,5 @@
 {
-    "version" : "0.0.1 alpha B-2",
+    "version" : "0.0.1 alpha C-3",
     "name" : "EatzGo",
     "short_name" : "EatzG",
     "type" : "App",
@@ -8,6 +8,7 @@
     "scripts" : [
         "${fileDirname}\\main.py",
         "${fileDirname}\\shell.py",
+        "${fileDirname}\\updater.py",
         "${fileDirname}\\security\\__init__.py"
     ],
     "docs" : [
@@ -50,9 +51,9 @@
     ],
     "locales" : [
         {
-            "locales.path" : "${fileDirname}\\main.py::12",
-            "locales.en" : "${fileDirname}\\main.py::13-19",
-            "locales.fr" : "${fileDirname}\\main.py::21-26"
+            "locales.path" : "${fileDirname}\\main.py::15",
+            "locales.en" : "${fileDirname}\\main.py::16-23",
+            "locales.fr" : "${fileDirname}\\main.py::25-31"
         }
     ],
     "programing_lang" : [
@@ -61,9 +62,13 @@
             "programing_lang.version" : 3.8
         }
     ],
-    "public_executable" : "${fileDirname}\\EatzGo.exe",
+    "public_executable" : [
+        "${fileDirname}\\EatzGo.exe",
+        "${fileDirname}\\eaztgo.cmd"
+    ],
     "dev_executables" : [
         "${fileDirname}\\main.py",
-        "${fileDirname}\\eatzgodev.sh"
+        "${fileDirname}\\eatzgodev.sh",
+        "${fileDirname}\\eatzgoshell.sh"
     ]
 }

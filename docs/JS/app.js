@@ -1,4 +1,3 @@
-const downlaod_btn = document.querySelector('#downlaod_btn');
 const dark_mod_btn = document.querySelector('#dark_mod_btn');
 const light_mod_btn = document.querySelector('#light_mod_btn');
 const main_theme_btn = document.querySelector("#main_theme_btn");
