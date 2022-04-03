@@ -9,7 +9,7 @@ class EatzGoSecurityChecker(object):
         self.LICENSE = "./LICENSE"
         self.CopyRight = "./CopyRight.txt"
         self.AUTHORS = "./AUTHORS.md"
-        self.ThirdPartyNotice = "./ThirdPartyNotice.txt"
+        self.ThirdPartyNotice = "./ThirdPartyNotices.md"
 
         if os.path.exists(self.LICENSE):
             print(self.LICENSE, "file found.")

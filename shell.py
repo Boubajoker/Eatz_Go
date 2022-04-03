@@ -1,5 +1,6 @@
 import os
 from typing import Any
+from security import EatzGoSecurityChecker
 import random
 
 main_msg = print("EatzGo Copyright (c) Boubajoker 2021. All right reserved.\nProject under MIT License. Type `-h` or `--help` to get help.")
@@ -11,9 +12,10 @@ EatzGoShell is a developer option of EatzGo, here you can type varius types of c
 
 Commands:
     <-- buildit-in's commands -->
-        -h: The command that your typed seconds ago.
+        -h: The command that you have been typed seconds ago.
         cd: Generate an \"str\" text of the actual directory.
         quit: Quit the shell.
+        cls / clear: clear shell's commands history on the screen.
 
     <-- shell commands -->
         Usage: EatzGo --<option>
@@ -45,7 +47,7 @@ class EatzGoShell(object):
             elif self.input_command == "--help":
                 print(help_msg)
             elif self.input_command == "clear":
-                os.system("clear")
+                os.system("cls")
             elif self.input_command == "cls":
                 os.system("cls")
             # shell commands
@@ -72,4 +74,5 @@ class EatzGoShell(object):
                 print(f"[ERROR]:\"{self.input_command}\" is not defined. You can try this: {random.choice(self.commands)}")
 
 if __name__ == '__main__':
+    EatzGoSecurityChecker()
     EatzGoShell()

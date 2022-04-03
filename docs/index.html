@@ -21,11 +21,15 @@
             <span class="loader-text">.</span>
             <span class="loader-text">.</span>
         </div>
+        <div class="data-loading-container" id="data_loading_container">
+            <p class="data-loading-text" id="data_loading_text"></p>
+        </div>
+        <script src="./JS/loading.js"></script>
     </div>
 <script>
-    setTimeout(()=>{
-        window.location = "./home.html"
-    }, 8000);
+    let site_data = new SiteData();
+
+    site_data.update_load_data(100, 4000);
 </script>
 </body>
 </html>

@@ -6,11 +6,13 @@ body {
 .loader-container {
     text-align: center;
     font-size: 70px;
-    letter-spacing: 5px;
     text-shadow: 0px 0px 10px #f9fd00;
 }
 .loader-text {
     animation: loading 4s infinite ease-in-out;
+}
+.data-loading-text {
+    text-align: center;
 }
 @keyframes loading {
     15% {

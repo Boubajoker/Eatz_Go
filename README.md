@@ -10,9 +10,9 @@ And that's it, the IA will prupose to you a meal !
 
 ## Requied to launch the project (dev)
 
-- [`GNU bash`](https://)
-- [`Python 3.8.10 minimal version`](https://python.org/)
-- [`Win7 64bits minimal`](https://microsoft.com/)
+- [`GNU bash`](https://git-scm.com/)
+- [`Python 3.8.10 (minimal version)`](https://python.org/)
+- [`Win7 64bits (minimal version)`](https://microsoft.com/)
 
 ## To make sure that the requied tools are installed:
 
@@ -41,7 +41,11 @@ bash --version
 
 ## To launch the project (dev)
 
-To launch the project, you need to use `GNU bash` shell (!WARNING!: the extension are `.cmd` but the script is not adaptated to the CMD's default Windows shell so, DO NOT EXECUTE IT WITH `CMD` IT ISN'T ADAPTATED !!)
+To launch the project, you need to use `GNU bash` shell.
+
+- To launch the program execute [`eatzgo.cmd`](eatzgo.cmd).
+- To launch `EatzGoShell` execute [`eatzgoshell.cmd`](eatzgoshell.cmd).
+- To execute a developper edition execute [`eatzgodev.cmd`](eatzgodev.cmd).
 
 ## Update EatzGo
 
@@ -56,7 +60,7 @@ To update EatzGo to the latest version, please follow the instructions:
 
 ## EatzGoShell
 
-A simple EatzGo Develloper option. Execute it with '[`shell.py`](shell.py)'
+A simple EatzGo Develloper option. Here you can type commands to execute varius things in the project. You can execute it with the file [`shell.py`](shell.py) or the file [`eatzgoshell.cmd`](eatzgoshell.cmd)
 
 ## Online Documentation
 

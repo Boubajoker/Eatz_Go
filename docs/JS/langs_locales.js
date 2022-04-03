@@ -1,6 +1,6 @@
 const locales = {
     "wlcm_msg_text" : "Welcome to Eatz Go online HomePage !",
-    "downlaod_btn_text" : "Downlaod The Last version of EatzGo (v0.0.1 Alpha C-3), Alpha Release",
+    "downlaod_btn_text" : "Downlaod The Last version of EatzGo (v0.0.1 Delta A-1), Alpha Release",
     "main_docs_title_text" : "Documentation of EatzGo",
     "question_01_text" : "How to use it ?",
     "awnser_01_text" : "Just launch <tt>EatzGo.exe</tt> file for launch EatzGo.",
@@ -10,7 +10,7 @@ const locales = {
     "awnser_02_bis_text" : "And that's it, it will be switched to french !",
 
     "fr_wlcm_msg_text" : "Bienvenu sur la documentation web de EatzGo !",
-    "fr_downlaod_btn_text" : "Télécharger la dernière version de EatzGo (v0.0.1 Alpha C-3) Realse Alpha",
+    "fr_downlaod_btn_text" : "Télécharger la dernière version de EatzGo (v0.0.1 Delta A-1) Realese Alpha",
     "fr_main_docs_title_text" : "Documentation de EatzGo",
     "fr_question_01_text" : "Comment l'utiliser ?",
     "fr_awnser_01_text" : "Lancez juste le fichier <tt>EatzGo.exe</tt> pour lancer EatzGo.",

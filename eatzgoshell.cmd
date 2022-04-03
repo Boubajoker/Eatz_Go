@@ -1,1 +1,4 @@
-start %cd%\\shell.py
+@echo off
+
+title EatzGoShell
+%cd%\shell.py

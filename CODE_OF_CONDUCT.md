@@ -116,7 +116,7 @@ the community.
 
 **Community Impact**: Demonstrating a pattern of violation of community
 standards, including sustained inappropriate behavior, harassment of an
-individual, or aggression toward or disparagement of classes of individuals and making a copy
+individual, or aggression toward or disparagement of classes of individuals, or making a copy
 without the requied files (see [`CopyRight.txt`](CopyRight.txt) file for more info).
 
 **Consequence**: A definitive ban from any sort of public interaction within

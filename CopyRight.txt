@@ -6,7 +6,7 @@ Project under MIT License.
 EatzGo therms:
     DO NOT DO A COPY OF THIS PROJECT WITHOUT THE FOLLOWING FILES:
     - CopyRight.txt
-    - ThirdPartyNotice.txt
+    - ThirdPartyNotices.md
     - AUTHORS.md
     - LICENSE
 

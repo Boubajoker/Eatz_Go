@@ -1,4 +1,5 @@
+@echo off
+
+title EatzGo : Console
 echo Starting EatzGo...
-start %cd%\EatzGo.exe
-pause
-TASKKILL /IM EatzGo.exe
+%cd%\EatzGo.exe

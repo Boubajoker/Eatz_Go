@@ -23,6 +23,7 @@
             ],
             "docs.scripts" : [
                 "${fileDirname}\\docs\\JS\\app.js",
+                "${fileDirname}\\docs\\JS\\langs_locales.js",
                 "${fileDirname}\\docs\\JS\\loading.js"
             ],
             "docs.assets" : [
@@ -51,9 +52,9 @@
     ],
     "locales" : [
         {
-            "locales.path" : "${fileDirname}\\main.py::15",
-            "locales.en" : "${fileDirname}\\main.py::16-23",
-            "locales.fr" : "${fileDirname}\\main.py::25-31"
+            "locales.path" : "${fileDirname}\\main.py",
+            "locales.en" : "${fileDirname}\\main.py",
+            "locales.fr" : "${fileDirname}\\main.py"
         }
     ],
     "programing_lang" : [
@@ -68,7 +69,7 @@
     ],
     "dev_executables" : [
         "${fileDirname}\\main.py",
-        "${fileDirname}\\eatzgodev.sh",
-        "${fileDirname}\\eatzgoshell.sh"
+        "${fileDirname}\\eatzgodev.cmd",
+        "${fileDirname}\\eatzgoshell.cmd"
     ]
 }
